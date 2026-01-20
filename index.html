@@ -222,16 +222,20 @@
     }
 
     .hero-image{
-      width:100%;
-      max-width:500px;
-      height:auto;
+      width: 100%;
+      max-width: 500px;
+      height: 400px;              /* как у твоего красного блока */
+      object-fit: cover;          /* заполняет рамку без искажений */
       border-radius: 20px;
       box-shadow: var(--shadow-xl);
       transform: perspective(1000px) rotateY(-5deg);
-      transition: transform .3s ease;
+      transition: transform 0.3s ease;
+      display: block;
     }
-    .hero-image:hover{ transform: perspective(1000px) rotateY(0deg) scale(1.05); }
 
+.hero-image:hover{
+  transform: perspective(1000px) rotateY(0deg) scale(1.05);
+}
     .cta-primary{
       background: var(--primary-color);
       color:white;
@@ -554,9 +558,14 @@
       </div>
 
       <div class="hero-visual">
-        <div class="hero-image-placeholder" style="width: 100%; max-width: 500px; height: 400px; background: linear-gradient(135deg, var(--primary-color), var(--primary-dark)); border-radius: 20px; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem; font-weight: 600; box-shadow: var(--shadow-xl);">
-          1xBet Casino
-        </div>
+              <img
+        class="hero-image"
+        src="https://1x-bet.services/img/1x-bet-services-h2-3-chto-predstavlyaet-soboy-onlayn-kazino-1xbet.jpg"
+        alt="1xBet Casino"
+        loading="eager"
+        width="1200"
+        height="750"
+      />
       </div>
     </div>
   </section>
